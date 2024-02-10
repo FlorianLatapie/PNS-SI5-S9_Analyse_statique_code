@@ -32,7 +32,7 @@ bandit-config-generator -o default-config.yml
 Notre fichier de configuration
 
 ```config.yml
-tests: [B105]
+tests: [B102, B105, B106, B107, B310, B610, B608]
 skips: []
 ```
 
