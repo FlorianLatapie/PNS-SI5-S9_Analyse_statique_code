@@ -83,3 +83,9 @@ TODO mettre les morceaux de code modifiés
 semgrep pour dossiers 2/3/4
 ![alt text](image-7.png)
 ![alt text](image-8.png)
+
+exo 3 semgrep findings 
+
+![alt text](image-9.png)
+![alt text](image-10.png)
+![alt text](image-11.png)
