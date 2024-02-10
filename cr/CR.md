@@ -1,5 +1,7 @@
 # CR
 
+Florian Latapie, Élisa Roux - 2024-02-10
+
 ## Initial setup
 
 ```bash
@@ -9,6 +11,8 @@ source venv/bin/activate
 pip install bandit
 bandit -v
 ```
+
+![alt text](image-6.png)
 
 ## Exercice 1
 
@@ -47,6 +51,8 @@ Rapports disponibles :
 - [report.html](report.html)
 - [report.txt](report.txt)
 
+TODO : vérifier que j'ai bien généré le bon rapport mdr
+
 ## Exercice 2
 
 ```bash
@@ -55,7 +61,13 @@ pip install semgrep
 git clone https://github.com/FlorianLatapie/PNS-SI5-S9_Analyse_statique_code.git
 ```
 
-analasys on exo2 
+Analyse sur le dossier exercice 2.
+
+Dans le dossier que l'on souhaite analyser
+
+```bash
+semgrep ci
+```
 
 ![Alt text](image-1.png)
 
@@ -63,8 +75,8 @@ analasys on exo2
 
 ![Alt text](image-3.png)
 
-1er truc 
 
 ![Alt text](image-4.png)
 
-![Alt text](image-5.png)
+TODO mettre les morceaux de code modifiés 
+
