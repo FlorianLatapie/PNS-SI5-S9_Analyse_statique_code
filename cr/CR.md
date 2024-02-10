@@ -12,12 +12,20 @@ bandit -v
 
 ## Exercice 1
 
-doc : https://bandit.readthedocs.io/en/latest/start.html#baseline
+doc : <https://bandit.readthedocs.io/en/latest/start.html#baseline>, <https://bandit.readthedocs.io/en/latest/config.html>
 
 ```bash
 bandit -r . -f html -o report.html
 bandit -r . -f txt -o report.txt
 ```
+
+Générer un fichier de configuration
+
+```bash
+bandit-config-generator -o default-config.yml
+```
+
+Notre fichier de configuration
 
 ```config.yml
 tests: [B105]
@@ -25,9 +33,19 @@ skips: []
 ```
 
 ```bash
-bandit -c config.yml -r . -f html -o report.html
-bandit -c config.yml -r . -f txt -o report.txt
+bandit -r . -f html -o default-report.html -c default-config.yml
+bandit -r . -f txt -o default-report.txt -c default-config.yml
+
+bandit -r . -f html -o report.html -c my_config.yml
+bandit -r . -f txt -o report.txt -c my_config.yml
 ```
+
+Rapports disponibles :
+
+- [default-report.html](default-report.html)
+- [default-report.txt](default-report.txt)
+- [report.html](report.html)
+- [report.txt](report.txt)
 
 ## Exercice 2
 
