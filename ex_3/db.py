@@ -1,4 +1,3 @@
-
 import sqlite3
 from passlib.hash import pbkdf2_sha256
 
@@ -16,7 +15,7 @@ def db_init():
     c.execute("CREATE TABLE users (user text, password text, failures int)")
 
     for u,p in users:
-        c.execute("INSERT INTO users (user, password, failures) VALUES ('%s', '%s', '%d')" %(u, p, 0))
+        c.execute("INSERT INTO users (user, password, failures) VALUES (?, ?, ?)", (u, p, 0))
 
     conn.commit()
     conn.close()
@@ -24,4 +23,3 @@ def db_init():
 
 if __name__ == '__main__':
     db_init()
-
