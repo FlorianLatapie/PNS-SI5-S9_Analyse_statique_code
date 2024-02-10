@@ -80,3 +80,6 @@ semgrep ci
 
 TODO mettre les morceaux de code modifiés 
 
+semgrep pour dossiers 2/3/4
+![alt text](image-7.png)
+![alt text](image-8.png)
