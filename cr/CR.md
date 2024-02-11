@@ -1,8 +1,8 @@
-# CR
+# Commandes utiles
 
-Florian Latapie, Élisa Roux - 2024-02-10
+## Setup
 
-## Initial setup
+Testé sur Kali VM, et WSL2 Ubuntu
 
 ```bash
 pip3 install virtualenv
@@ -74,25 +74,3 @@ exporter le rapport
 ```bash
 semgrep --config p/default --json --output report.json
 ```
-
-
-![Alt text](image-1.png)
-
-![Alt text](image-2.png)
-
-![Alt text](image-3.png)
-
-
-![Alt text](image-4.png)
-
-TODO mettre les morceaux de code modifiés 
-
-semgrep pour dossiers 2/3/4
-![alt text](image-7.png)
-![alt text](image-8.png)
-
-exo 3 semgrep findings 
-
-![alt text](image-9.png)
-![alt text](image-10.png)
-![alt text](image-11.png)

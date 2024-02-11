@@ -13,20 +13,20 @@ query = "SELECT * FROM foo WHERE id = '{}'".format(identifier)
 query = "SELECT * FROM foo WHERE id = '[VALUE]'".replace("[VALUE]", identifier)
 
 # bad
-cur.execute("SELECT * FROM foo WHERE id = '%s'" % identifier)
-cur.execute("INSERT INTO foo VALUES ('a', 'b', '%s')" % value)
-cur.execute("DELETE FROM foo WHERE id = '%s'" % identifier)
-cur.execute("UPDATE foo SET value = 'b' WHERE id = '%s'" % identifier)
+cur.execute("SELECT * FROM foo WHERE id = ?", (identifier,))
+cur.execute("INSERT INTO foo VALUES ('a', 'b', ?)", (value,))
+cur.execute("DELETE FROM foo WHERE id = ?", (identifier,))
+cur.execute("UPDATE foo SET value = 'b' WHERE id = ?", (identifier,))
 # bad alternate forms
-cur.execute("SELECT * FROM foo WHERE id = '" + identifier + "'")
-cur.execute("SELECT * FROM foo WHERE id = '{}'".format(identifier))
+cur.execute("SELECT * FROM foo WHERE id = ?", (identifier,))
+cur.execute("SELECT * FROM foo WHERE id = ?", (identifier))
 cur.execute("SELECT * FROM foo WHERE id = '[VALUE]'".replace("[VALUE]", identifier))
 
 # bad f-strings
-cur.execute(f"SELECT {column_name} FROM foo WHERE id = 1")
-cur.execute(f"SELECT {a + b} FROM foo WHERE id = 1")
-cur.execute(f"INSERT INTO {table_name} VALUES (1)")
-cur.execute(f"UPDATE {table_name} SET id = 1")
+cur.execute("SELECT ? FROM foo WHERE id = 1", (column_name))
+cur.execute("SELECT ? FROM foo WHERE id = 1", (a+b))
+cur.execute("INSERT INTO ? VALUES (1)", (table_name))
+cur.execute("UPDATE ? SET id = 1", (table_name))
 
 # good
 cur.execute("SELECT * FROM foo WHERE id = '%s'", identifier)
