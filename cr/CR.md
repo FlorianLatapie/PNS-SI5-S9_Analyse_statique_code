@@ -69,6 +69,13 @@ Dans le dossier que l'on souhaite analyser
 semgrep ci
 ```
 
+exporter le rapport
+
+```bash
+semgrep --config p/default --json --output report.json
+```
+
+
 ![Alt text](image-1.png)
 
 ![Alt text](image-2.png)
